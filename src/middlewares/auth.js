@@ -3,7 +3,6 @@
 const jwt = require('jsonwebtoken')
 
 module.exports = function (req, res, next) {
-    console.log(req.headers);
     const authHeader = req.headers['authorization']
     const token = authHeader && authHeader.split(' ')[1]
 
@@ -18,3 +17,4 @@ module.exports = function (req, res, next) {
         return res.status(400).json({ msg: 'Token inválido!' })
     }
 }
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNWIwNWQ0MzkyMGIyZDgyZWZlNTE5ZSIsImlhdCI6MTY2Njk5MzQ3MX0.H3D9r9tX3MNzU6KSxs3n9r8PZhwoK7uJ3-9j-FuUjU0
